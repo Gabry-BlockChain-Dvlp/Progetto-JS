@@ -1,0 +1,1 @@
+Questo è il file README del mio progetto contatorte in JS, qui spiego passo per passo tutte le decisioni che ho attuato sul codice , i cambiamenti apportati ed eventuali migliorie.
