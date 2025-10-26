@@ -6,9 +6,55 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.settings-panel {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.8);
+   display: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+}
+
+.settings-content {
+   background-color: white;
+   padding: 20px;
+   border-radius: 8px;
+   min-width: 300px;
+   margin: 20px;
+}
+
+#settingsBtn {
+  background: url('/assets/images/settings.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#green {
+  background: linear-gradient(135deg, #2ecc71, #bdc3c7);
+}
+#blue {
+  background: linear-gradient(135deg, #2980b9, #6dd5ed);
+}
+#grey {
+  background: linear-gradient(135deg, #bdc3c7, #2c3e50);
 }
 
 .container {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +70,7 @@ body {
 }
 
 #numero {
-  font-size: 14vw; /* Più grande */
+  font-size: 14vw; 
   color: white;
   padding: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);

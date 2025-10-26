@@ -1,19 +1,73 @@
 let main = 0; 
 let contatoreDIV; 
 let numeroSpan;
+const grigio = "linear-gradient(135deg, #bdc3c7, #2c3e50)";
+const blu = "linear-gradient(135deg, #3b24bfff, #6dd5ed)";
+const verde = "linear-gradient(135deg, #1bb82dff, #bdc3c7)";
 
+function creaSettingsBtn() {
+   const settingsBtn = document.createElement("button");
+   settingsBtn.id = "settingsBtn";
+   settingsBtn.classList.add("btn", "btn-secondary");
+   
+   const settingsPanel = document.createElement("div");
+   settingsPanel.id = "settingsPanel";
+   settingsPanel.className = "settings-panel";
+   settingsPanel.innerHTML = `
+      <div class="settings-content">
+         <h3>Impostazioni</h3>
+         <label for="impostaValore">Imposta valore iniziale:</label>
+         <input type="number" id="impostaValore" class="form-control" placeholder="Imposta valore">
+         <button id="setValoreBtn" class="btn btn-primary mt-2">Imposta Valore</button>
 
+         <button id="closeSettings" class="btn btn-danger">Chiudi</button>
+      </div>
+      <div class="settings-content">
+         <button id="grey" class="btn btn-secondary">Sfondo Grigio</button>
+         <button id="blue" class="btn btn-secondary">Sfondo Blu</button>
+         <button id="green" class="btn btn-secondary">Sfondo Verde</button>
+      </div>
+   `;
+   settingsPanel.style.display = "none";
+   
+   document.querySelector(".container").appendChild(settingsBtn);
+   document.body.appendChild(settingsPanel);
+   
+   settingsBtn.addEventListener("click", () => {
+      settingsPanel.style.display = "flex";
+   });
+
+   document.getElementById("grey").addEventListener("click", () => {
+      document.body.style.background = grigio;
+   });
+   document.getElementById("blue").addEventListener("click", () => {
+      document.body.style.background = blu;
+   });
+   document.getElementById("green").addEventListener("click", () => {
+      document.body.style.background = verde;
+   });
+
+   document.getElementById("setValoreBtn").addEventListener("click", () => {
+      const nuovoValore = parseInt(document.getElementById("impostaValore").value, 10);
+      if (!isNaN(nuovoValore) && nuovoValore >= 0) {
+         main = nuovoValore;
+      }
+      aggiornaContatore(true);
+      settingsPanel.style.display = "none";
+   });
+   document.getElementById("closeSettings").addEventListener("click", () => {
+      settingsPanel.style.display = "none";
+   });
+}
 function creaContatore() {
-   // Wrapper per la riga centrale
    const row = document.createElement("div");
    row.className = "row-flex";
 
-   // Bottone diminuisci
+
    const decreaseBtn = document.createElement("button");
    decreaseBtn.id = "diminuisci";
    decreaseBtn.textContent = "- 1";
 
-   // Numero
    contatoreDIV = document.createElement("div");
    numeroSpan = document.createElement("span");
    numeroSpan.textContent = main;
@@ -49,6 +103,7 @@ function creaResetBtn() {
 }
 
 function inizializzaPagina() {
+   creaSettingsBtn();
    creaContatore();
    creaResetBtn();
 
