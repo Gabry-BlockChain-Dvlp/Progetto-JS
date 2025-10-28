@@ -14,15 +14,14 @@ function creaSettingsBtn() {
    settingsPanel.id = "settingsPanel";
    settingsPanel.className = "settings-panel";
    settingsPanel.innerHTML = `
+   <span id="closeSettings" class="close-btn">&times;</span>
       <div class="settings-content">
-         <h3>Impostazioni</h3>
-         <label for="impostaValore">Imposta valore iniziale:</label>
-         <input type="number" id="impostaValore" class="form-control" placeholder="Imposta valore">
+         <h3>Imposta valore iniziale:</h3>
+         <input type="number" id="impostaValore" class="form-control" placeholder="Scrivi un numero">
          <button id="setValoreBtn" class="btn btn-primary mt-2">Imposta Valore</button>
-
-         <button id="closeSettings" class="btn btn-danger">Chiudi</button>
       </div>
       <div class="settings-content">
+         <h3>Cambia sfondo:</h3>
          <button id="grey" class="btn btn-secondary">Sfondo Grigio</button>
          <button id="blue" class="btn btn-secondary">Sfondo Blu</button>
          <button id="green" class="btn btn-secondary">Sfondo Verde</button>
