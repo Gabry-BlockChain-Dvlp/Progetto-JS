@@ -1,19 +1,78 @@
-# Simple Counter
+# 🔢 Simple Counter
 
-Un semplice contatore realizzato interamente in JavaScript, con un’interfaccia minimale e funzionale.
-Il progetto permette di incrementare, decrementare e resettare un valore numerico visualizzato a schermo.
+Un contatore interattivo realizzato con JavaScript vanilla, che offre un'interfaccia pulita e animazioni fluide per un'esperienza utente ottimale.
 
-## Funzionalità
+## 📸 Screenshot
 
--Incremente il valore del contatore
--Decrementa il valore del contatore
--Permette di resettare il valore a 0
--Consente di impostare un valore iniziale a scelta
--UI semplice e animazioni fluide
+![Counter Screenshot](assets/images/screenshot.png)
 
-## Settings Section
+## ✨ Funzionalità
 
-La sezione delle impostazioni permette di impostare un valore a scelta per il contatore e di cambiare lo sfondo nei colori a disposizione.
+- **Incremento/Decremento**: Modifica il valore con i pulsanti +1 e -1
+- **Reset rapido**: Riporta il contatore a 0 con un solo click
+- **Valore personalizzato**: Imposta un numero iniziale a tua scelta
+- **Temi personalizzabili**: Scegli tra diversi sfondi sfumati (Grigio, Blu, Verde)
+- **Animazioni fluide**: Feedback visivo per ogni interazione
+- **Design responsive**: Si adatta a qualsiasi dimensione dello schermo
 
-![Screen del Counter](https://github.com/Gabry-BlockChain-Dvlp/Progetto-JS/issues/1#issue-3563012790)
+## 🎨 Caratteristiche Tecniche
 
+- Nessuna dipendenza esterna (solo JavaScript vanilla)
+- Interfaccia costruita dinamicamente via DOM manipulation
+- Animazioni CSS smooth e performanti
+- Bootstrap 5 per gli stili base
+- Protezione contro valori negativi
+
+## 🚀 Come Utilizzare
+
+1. Clona il repository
+2. Apri `index.html` nel tuo browser
+3. Inizia a usare il contatore!
+
+### Comandi disponibili:
+
+- **+ 1**: Incrementa il valore
+- **- 1**: Decrementa il valore (minimo 0)
+- **Reset**: Riporta il contatore a zero
+- **⚙️ Impostazioni**: 
+  - Imposta un valore iniziale personalizzato
+  - Cambia lo sfondo tra Grigio, Blu o Verde
+
+## 📁 Struttura del Progetto
+```
+ProgettoJS/
+│
+├── index.html              # Pagina principale
+├── assets/
+│   ├── styles.css         # Stili e animazioni
+│   └── images/            # Immagini e icone
+└── js/
+    └── app.js             # Logica dell'applicazione
+```
+
+## 🛠️ Tecnologie Utilizzate
+
+- HTML5
+- CSS3 (Animazioni, Gradients, Flexbox)
+- JavaScript ES6+
+- Bootstrap 5.3.8
+
+## 💡 Funzionalità Future
+
+- [ ] Salvataggio del valore in localStorage
+- [ ] Modalità dark/light
+- [ ] Incremento/decremento personalizzabile
+- [ ] Storico delle operazioni
+- [ ] Suoni di feedback
+
+## 📝 Note
+
+Il progetto è stato creato come esercizio di apprendimento per praticare la manipolazione del DOM e le animazioni CSS in JavaScript vanilla.
+
+## 📄 Licenza
+
+Progetto open source - sentiti libero di usarlo e modificarlo!
+
+---
+
+⭐ Se ti piace il progetto, lascia una stella!
