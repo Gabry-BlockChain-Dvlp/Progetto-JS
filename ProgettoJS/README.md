@@ -4,7 +4,7 @@ Un contatore interattivo realizzato con JavaScript vanilla, che offre un'interfa
 
 ## 📸 Screenshot
 
-![Counter Screenshot](/assets/images/Screenshot.png)
+![Counter Screenshot](./assets/images/Screenshot.png)
 
 ## ✨ Funzionalità
 
