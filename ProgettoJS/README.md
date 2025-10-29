@@ -57,14 +57,6 @@ ProgettoJS/
 - JavaScript ES6+
 - Bootstrap 5.3.8
 
-## 💡 Funzionalità Future
-
-- [ ] Salvataggio del valore in localStorage
-- [ ] Modalità dark/light
-- [ ] Incremento/decremento personalizzabile
-- [ ] Storico delle operazioni
-- [ ] Suoni di feedback
-
 ## 📝 Note
 
 Il progetto è stato creato come esercizio di apprendimento per praticare la manipolazione del DOM e le animazioni CSS in JavaScript vanilla.
